@@ -34,8 +34,8 @@ class LinkedList:
 
         # count = 7
 
-        if n > count -1:
-            return None
+        if n > count -1: # DO NOT FORGET THIS
+            return None 
 
         p2 = self.head
         for i in range(count-1-n):

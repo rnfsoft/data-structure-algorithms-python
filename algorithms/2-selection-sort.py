@@ -2,7 +2,7 @@
 
 import unittest
 
-def selectionSort(input):
+def selectionSort(input): # FAILED
     for i in range(len(input) -1):
         min_idx = i
         j = i + 1

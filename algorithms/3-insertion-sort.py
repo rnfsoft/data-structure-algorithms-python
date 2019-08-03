@@ -6,7 +6,7 @@ def insertion_sort(input):
     for i, value in enumerate(input):
         while i > 0 and input[i-1] > value:
             input[i-1], input[i] = input[i], input[i-1]
-            i -= 1
+            i -= 1 # DO NOT FORGET THIS
     return input
 
 class UnitTest(unittest.TestCase):
