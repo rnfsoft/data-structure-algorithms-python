@@ -5,7 +5,7 @@ def top_k_frequent_number(nums, k):
 
     return sorted(num_map, key=num_map.get, reverse=True)[:k]
 
-def top_k_frequent_number2(nums, k):
+def top_k_frequent_number2(nums, k): # Time O(n), Space O(6+k+2) 
     num_map = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
     for num in nums:
         num_map[num] += 1
