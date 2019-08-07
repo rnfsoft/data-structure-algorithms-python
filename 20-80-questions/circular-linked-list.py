@@ -8,13 +8,13 @@ class LinkedList:
         self.head = None
 
 
-def is_circular(input):
-    cur = input.head
-    while cur.next:
-        cur = cur.next
-        if cur.next == input.head:
-            return True
-    return False
+def is_circular(head):
+    if head==None: 
+        return True
+    node = head.next
+    while((node is not None) and (node is not head)): 
+        node = node.next
+    return(node==head) 
 
 ll = LinkedList()
 ll.head = Node(1)
@@ -25,7 +25,13 @@ fourth = Node(4)
 ll.head.next = second
 second.next = third
 third.next = fourth
-if is_circular(ll.head):
-    print ('Yes')
-else:
-    print ('No')
+# if is_circular(ll.head):
+#     print ('Yes')
+# else:
+#     print ('No')
+fourth.next = ll.head 
+      
+if is_circular(ll.head): 
+    print('Yes') 
+else: 
+    print('No') 

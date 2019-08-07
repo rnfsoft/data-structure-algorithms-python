@@ -9,4 +9,4 @@ def primes(number):
                 primes.append(num)
     return primes
 
-print(primes(1000000))
+print(primes(1000))

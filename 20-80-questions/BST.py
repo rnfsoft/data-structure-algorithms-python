@@ -22,27 +22,18 @@ def is_BST(root):
     return True
 
 
-def is_bst_satisfied(root):
-    if root:
-        is_satisfied = _is_bst_satisfiled(root, root.data)
-        if is_satisfied is None:
-            return True
+def isBST(root, l = None, r = None):
+    if root == None:
+        return True
+    
+    if (l != None and root.data <= l.data):
         return False
-    return True
 
+    if (r != None and root.data >= r.data):
+        return False
 
+    return isBST(root.left, l, root) and isBST(root.right, root, r)
 
-def _is_bst_satisfiled(cur_node, data):
-    if cur_node.left:
-        if data > cur_node.left.data:
-            return _is_bst_satisfiled(cur_node.left, cur_node.left.data)
-        else:
-            return False
-    if cur_node.right:
-        if data < cur_node.right.data:
-            return _is_bst_satisfiled(cur_node.right, cur_node.right.data)
-        else:
-            return False
 
 root = Node(3) 
 root.left = Node(2) 
@@ -55,7 +46,7 @@ if is_BST(root):
 else: 
     print("not a BST") 
 
-if is_bst_satisfied(root): 
+if isBST(root): 
     print("is BST") 
 else: 
     print("not a BST") 
@@ -72,7 +63,7 @@ if is_BST(root2):
 else: 
     print("not a BST") 
 
-if is_bst_satisfied(root2): 
+if isBST(root2): 
     print("is BST") 
 else: 
     print("not a BST") 
