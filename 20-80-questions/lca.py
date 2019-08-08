@@ -17,6 +17,19 @@ def lca(root, n1, n2):
             break
     return root
 
+# Use this method
+def LCA(root, n1, n2):
+    if root is None:
+        return None
+
+    if (root.data > n1 and root.data > n2):
+        return lca(root.left, n1, n2)
+
+    if (root.data < n1 and root.data < n2):
+        return lca(root.right, n1, n2)
+
+    return root
+
 root = Node(20) 
 root.left = Node(8) 
 root.right = Node(22) 
@@ -26,9 +39,13 @@ root.left.right.left = Node(10)
 root.left.right.right = Node(14)
 t1 = lca(root, 10, 14)
 print (t1.data)
+T1 = LCA(root, 10, 14)
+print (T1.data)
 
 t2 = lca(root, 14, 8)
 print (t2.data)
+T2 = LCA(root, 14, 8)
+print (T2.data)
 
 
 

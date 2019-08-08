@@ -16,6 +16,24 @@ def is_circular(head):
         node = node.next
     return(node==head) 
 
+def isCircular(head):
+
+    slow = head
+    fast = head
+
+    while fast != None:
+        slow = slow.next
+
+        if fast.next != None:
+             fast = fast.next.next
+        else:
+             return False
+
+        if slow is fast:
+             return True
+
+    return False
+
 ll = LinkedList()
 ll.head = Node(1)
 second = Node(2)
@@ -25,13 +43,25 @@ fourth = Node(4)
 ll.head.next = second
 second.next = third
 third.next = fourth
-# if is_circular(ll.head):
-#     print ('Yes')
-# else:
-#     print ('No')
+if is_circular(ll.head):
+    print ('Yes')
+else:
+    print ('No')
+
+if isCircular(ll.head):
+    print ('Yes')
+else:
+    print ('No')
+    
+
 fourth.next = ll.head 
       
 if is_circular(ll.head): 
     print('Yes') 
 else: 
-    print('No') 
+    print('No')
+    
+if isCircular(ll.head):
+    print ('Yes')
+else:
+    print ('No')
