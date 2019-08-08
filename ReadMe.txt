@@ -1,5 +1,9 @@
-
-Singularly Linked List
+References:
 https://docs.google.com/presentation/d/1TCTdhhAAisXc1g7O2uh3OwjkUXeYbt18nDR-ba_6WOs/edit
 https://github.com/vprusso/youtube_tutorials/tree/master/data_structures/linked_list/singularly_linked_list
-
+https://github.com/minsuk-heo/problemsolving
+https://www.youtube.com/watch?v=P3bB2li8IXE&list=PLVNY1HnUlO25sSWDr7CzVvkOF3bUgkiQQ&index=1
+https://www.geeksforgeeks.org/fundamentals-of-algorithms/
+https://www.youtube.com/watch?v=6oL-0TdVy28&list=PL5tcWHG-UPH112e7AN7C-fwDVPVrt0wpV&index=34
+https://www.geeksforgeeks.org/data-structures/
+https://www.quora.com/How-should-I-prepare-for-the-Amazon-online-coding-interview
